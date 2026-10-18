@@ -1,0 +1,437 @@
+## B0 — blocks-baseline-3
+Domain: pddl/blocksworld/domain.pddl
+Problem: pddl/blocksworld/baseline3.pddl
+Ground actions: 18
+
+Forward STRIPS / BFS:
+01. (pickup b)
+02. (stack b c)
+03. (pickup a)
+04. (stack a b)
+Validation: ok
+Dynamic-state trace:
+s00: (clear a) (clear b) (clear c) (handempty) (ontable a) (ontable b) (ontable c)    [goal facts satisfied: 0/2]
+s01: (clear a) (clear c) (holding b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+s02: (clear a) (clear b) (handempty) (on b c) (ontable a) (ontable c)    [goal facts satisfied: 1/2]
+s03: (clear b) (holding a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+s04: (clear a) (handempty) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (pickup b)
+t01: (stack b c)
+t02: (pickup a)
+t03: (stack a b)
+Validation: ok
+Dynamic-state trace:
+t00-state: (clear a) (clear b) (clear c) (handempty) (ontable a) (ontable b) (ontable c)    [goal facts satisfied: 0/2]
+t01-state: (clear a) (clear c) (holding b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+t02-state: (clear a) (clear b) (handempty) (on b c) (ontable a) (ontable c)    [goal facts satisfied: 1/2]
+t03-state: (clear b) (holding a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+t04-state: (clear a) (handempty) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+## B1 — blocks-sussman-3
+Domain: pddl/blocksworld/domain.pddl
+Problem: pddl/blocksworld/sussman3.pddl
+Ground actions: 18
+
+Forward STRIPS / BFS:
+01. (unstack c a)
+02. (putdown c)
+03. (pickup b)
+04. (stack b c)
+05. (pickup a)
+06. (stack a b)
+Validation: ok
+Dynamic-state trace:
+s00: (clear b) (clear c) (handempty) (on c a) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+s01: (clear a) (clear b) (holding c) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+s02: (clear a) (clear b) (clear c) (handempty) (ontable a) (ontable b) (ontable c)    [goal facts satisfied: 0/2]
+s03: (clear a) (clear c) (holding b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+s04: (clear a) (clear b) (handempty) (on b c) (ontable a) (ontable c)    [goal facts satisfied: 1/2]
+s05: (clear b) (holding a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+s06: (clear a) (handempty) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (unstack c a)
+t01: (putdown c)
+t02: (pickup b)
+t03: (stack b c)
+t04: (pickup a)
+t05: (stack a b)
+Validation: ok
+Dynamic-state trace:
+t00-state: (clear b) (clear c) (handempty) (on c a) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+t01-state: (clear a) (clear b) (holding c) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+t02-state: (clear a) (clear b) (clear c) (handempty) (ontable a) (ontable b) (ontable c)    [goal facts satisfied: 0/2]
+t03-state: (clear a) (clear c) (holding b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+t04-state: (clear a) (clear b) (handempty) (on b c) (ontable a) (ontable c)    [goal facts satisfied: 1/2]
+t05-state: (clear b) (holding a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+t06-state: (clear a) (handempty) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+## B2 — blocks-sussman-6
+Domain: pddl/blocksworld/domain.pddl
+Problem: pddl/blocksworld/sussman6.pddl
+Ground actions: 72
+
+Forward STRIPS / BFS:
+01. (pickup e)
+02. (stack e f)
+03. (pickup d)
+04. (stack d e)
+05. (unstack c a)
+06. (stack c d)
+07. (pickup b)
+08. (stack b c)
+09. (pickup a)
+10. (stack a b)
+Validation: ok
+Dynamic-state trace:
+s00: (clear b) (clear c) (clear d) (clear e) (clear f) (handempty) (on c a) (ontable a) (ontable b) (ontable d) (ontable e) (ontable f)    [goal facts satisfied: 0/5]
+s01: (clear b) (clear c) (clear d) (clear f) (holding e) (on c a) (ontable a) (ontable b) (ontable d) (ontable f)    [goal facts satisfied: 0/5]
+s02: (clear b) (clear c) (clear d) (clear e) (handempty) (on c a) (on e f) (ontable a) (ontable b) (ontable d) (ontable f)    [goal facts satisfied: 1/5]
+s03: (clear b) (clear c) (clear e) (holding d) (on c a) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 1/5]
+s04: (clear b) (clear c) (clear d) (handempty) (on c a) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 2/5]
+s05: (clear a) (clear b) (clear d) (holding c) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 2/5]
+s06: (clear a) (clear b) (clear c) (handempty) (on c d) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 3/5]
+s07: (clear a) (clear c) (holding b) (on c d) (on d e) (on e f) (ontable a) (ontable f)    [goal facts satisfied: 3/5]
+s08: (clear a) (clear b) (handempty) (on b c) (on c d) (on d e) (on e f) (ontable a) (ontable f)    [goal facts satisfied: 4/5]
+s09: (clear b) (holding a) (on b c) (on c d) (on d e) (on e f) (ontable f)    [goal facts satisfied: 4/5]
+s10: (clear a) (handempty) (on a b) (on b c) (on c d) (on d e) (on e f) (ontable f)    [goal facts satisfied: 5/5]
+
+GraphPlan:
+t00: (pickup e)
+t01: (stack e f)
+t02: (pickup d)
+t03: (stack d e)
+t04: (unstack c a)
+t05: (stack c d)
+t06: (pickup b)
+t07: (stack b c)
+t08: (pickup a)
+t09: (stack a b)
+Validation: ok
+Dynamic-state trace:
+t00-state: (clear b) (clear c) (clear d) (clear e) (clear f) (handempty) (on c a) (ontable a) (ontable b) (ontable d) (ontable e) (ontable f)    [goal facts satisfied: 0/5]
+t01-state: (clear b) (clear c) (clear d) (clear f) (holding e) (on c a) (ontable a) (ontable b) (ontable d) (ontable f)    [goal facts satisfied: 0/5]
+t02-state: (clear b) (clear c) (clear d) (clear e) (handempty) (on c a) (on e f) (ontable a) (ontable b) (ontable d) (ontable f)    [goal facts satisfied: 1/5]
+t03-state: (clear b) (clear c) (clear e) (holding d) (on c a) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 1/5]
+t04-state: (clear b) (clear c) (clear d) (handempty) (on c a) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 2/5]
+t05-state: (clear a) (clear b) (clear d) (holding c) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 2/5]
+t06-state: (clear a) (clear b) (clear c) (handempty) (on c d) (on d e) (on e f) (ontable a) (ontable b) (ontable f)    [goal facts satisfied: 3/5]
+t07-state: (clear a) (clear c) (holding b) (on c d) (on d e) (on e f) (ontable a) (ontable f)    [goal facts satisfied: 3/5]
+t08-state: (clear a) (clear b) (handempty) (on b c) (on c d) (on d e) (on e f) (ontable a) (ontable f)    [goal facts satisfied: 4/5]
+t09-state: (clear b) (holding a) (on b c) (on c d) (on d e) (on e f) (ontable f)    [goal facts satisfied: 4/5]
+t10-state: (clear a) (handempty) (on a b) (on b c) (on c d) (on d e) (on e f) (ontable f)    [goal facts satisfied: 5/5]
+
+## B3 — blocks-two-grippers
+Domain: pddl/blocksworld/domain_two_grippers.pddl
+Problem: pddl/blocksworld/sussman3_two_grippers.pddl
+Ground actions: 36
+
+Forward STRIPS / BFS:
+01. (pickup b left)
+02. (unstack c a right)
+03. (putdown c right)
+04. (pickup a right)
+05. (stack b c left)
+06. (stack a b right)
+Validation: ok
+Dynamic-state trace:
+s00: (clear b) (clear c) (free left) (free right) (on c a) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+s01: (clear c) (free right) (holding left b) (on c a) (ontable a)    [goal facts satisfied: 0/2]
+s02: (clear a) (holding left b) (holding right c) (ontable a)    [goal facts satisfied: 0/2]
+s03: (clear a) (clear c) (free right) (holding left b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+s04: (clear c) (holding left b) (holding right a) (ontable c)    [goal facts satisfied: 0/2]
+s05: (clear b) (free left) (holding right a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+s06: (clear a) (free left) (free right) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (unstack c a left)
+t01: (pickup b right) | (putdown c left)
+t02: (pickup a left) | (stack b c right)
+t03: (stack a b left)
+Validation: ok
+Dynamic-state trace:
+t00-state: (clear b) (clear c) (free left) (free right) (on c a) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+t01-state: (clear a) (clear b) (free right) (holding left c) (ontable a) (ontable b)    [goal facts satisfied: 0/2]
+t02-state: (clear a) (clear c) (free left) (holding right b) (ontable a) (ontable c)    [goal facts satisfied: 0/2]
+t03-state: (clear b) (free right) (holding left a) (on b c) (ontable c)    [goal facts satisfied: 1/2]
+t04-state: (clear a) (free left) (free right) (on a b) (on b c) (ontable c)    [goal facts satisfied: 2/2]
+
+## E0 — elevator-baseline
+Domain: pddl/elevator/domain.pddl
+Problem: pddl/elevator/baseline.pddl
+Ground actions: 22
+
+Forward STRIPS / BFS:
+01. (board p1 e0 f0)
+02. (move e0 f0 f1)
+03. (move e0 f1 f2)
+04. (move e0 f2 f3)
+05. (board p2 e0 f3)
+06. (leave p1 e0 f3)
+07. (move e0 f3 f2)
+08. (move e0 f2 f1)
+09. (leave p2 e0 f1)
+Validation: ok
+Dynamic-state trace:
+s00: (lift-at e0 f0) (passenger-at p1 f0) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+s01: (boarded p1 e0) (lift-at e0 f0) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+s02: (boarded p1 e0) (lift-at e0 f1) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+s03: (boarded p1 e0) (lift-at e0 f2) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+s04: (boarded p1 e0) (lift-at e0 f3) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+s05: (boarded p1 e0) (boarded p2 e0) (lift-at e0 f3)    [goal facts satisfied: 0/2]
+s06: (boarded p2 e0) (lift-at e0 f3) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+s07: (boarded p2 e0) (lift-at e0 f2) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+s08: (boarded p2 e0) (lift-at e0 f1) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+s09: (lift-at e0 f1) (passenger-at p1 f3) (passenger-at p2 f1)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (board p1 e0 f0)
+t01: (move e0 f0 f1)
+t02: (move e0 f1 f2)
+t03: (move e0 f2 f3)
+t04: (leave p1 e0 f3) | (board p2 e0 f3)
+t05: (move e0 f3 f2)
+t06: (move e0 f2 f1)
+t07: (leave p2 e0 f1)
+Validation: ok
+Dynamic-state trace:
+t00-state: (lift-at e0 f0) (passenger-at p1 f0) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+t01-state: (boarded p1 e0) (lift-at e0 f0) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+t02-state: (boarded p1 e0) (lift-at e0 f1) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+t03-state: (boarded p1 e0) (lift-at e0 f2) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+t04-state: (boarded p1 e0) (lift-at e0 f3) (passenger-at p2 f3)    [goal facts satisfied: 0/2]
+t05-state: (boarded p2 e0) (lift-at e0 f3) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+t06-state: (boarded p2 e0) (lift-at e0 f2) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+t07-state: (boarded p2 e0) (lift-at e0 f1) (passenger-at p1 f3)    [goal facts satisfied: 1/2]
+t08-state: (lift-at e0 f1) (passenger-at p1 f3) (passenger-at p2 f1)    [goal facts satisfied: 2/2]
+
+## E1 — elevator-split-service
+Domain: pddl/elevator/domain_split_service.pddl
+Problem: pddl/elevator/split_service.pddl
+Ground actions: 68
+
+Forward STRIPS / BFS:
+01. (board p1 even f2)
+02. (board p2 odd f5)
+03. (move even f2 f0)
+04. (leave p1 even f0)
+05. (move odd f5 f3)
+06. (move odd f3 f1)
+07. (move odd f1 f0)
+08. (board p1 odd f0)
+09. (leave p2 odd f0)
+10. (board p2 even f0)
+11. (move even f0 f2)
+12. (move even f2 f4)
+13. (leave p2 even f4)
+14. (move odd f0 f1)
+15. (move odd f1 f3)
+16. (leave p1 odd f3)
+Validation: ok
+Dynamic-state trace:
+s00: (lift-at even f2) (lift-at odd f5) (passenger-at p1 f2) (passenger-at p2 f5)    [goal facts satisfied: 0/2]
+s01: (boarded p1 even) (lift-at even f2) (lift-at odd f5) (passenger-at p2 f5)    [goal facts satisfied: 0/2]
+s02: (boarded p1 even) (boarded p2 odd) (lift-at even f2) (lift-at odd f5)    [goal facts satisfied: 0/2]
+s03: (boarded p1 even) (boarded p2 odd) (lift-at even f0) (lift-at odd f5)    [goal facts satisfied: 0/2]
+s04: (boarded p2 odd) (lift-at even f0) (lift-at odd f5) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+s05: (boarded p2 odd) (lift-at even f0) (lift-at odd f3) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+s06: (boarded p2 odd) (lift-at even f0) (lift-at odd f1) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+s07: (boarded p2 odd) (lift-at even f0) (lift-at odd f0) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+s08: (boarded p1 odd) (boarded p2 odd) (lift-at even f0) (lift-at odd f0)    [goal facts satisfied: 0/2]
+s09: (boarded p1 odd) (lift-at even f0) (lift-at odd f0) (passenger-at p2 f0)    [goal facts satisfied: 0/2]
+s10: (boarded p1 odd) (boarded p2 even) (lift-at even f0) (lift-at odd f0)    [goal facts satisfied: 0/2]
+s11: (boarded p1 odd) (boarded p2 even) (lift-at even f2) (lift-at odd f0)    [goal facts satisfied: 0/2]
+s12: (boarded p1 odd) (boarded p2 even) (lift-at even f4) (lift-at odd f0)    [goal facts satisfied: 0/2]
+s13: (boarded p1 odd) (lift-at even f4) (lift-at odd f0) (passenger-at p2 f4)    [goal facts satisfied: 1/2]
+s14: (boarded p1 odd) (lift-at even f4) (lift-at odd f1) (passenger-at p2 f4)    [goal facts satisfied: 1/2]
+s15: (boarded p1 odd) (lift-at even f4) (lift-at odd f3) (passenger-at p2 f4)    [goal facts satisfied: 1/2]
+s16: (lift-at even f4) (lift-at odd f3) (passenger-at p1 f3) (passenger-at p2 f4)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (board p1 even f2) | (board p2 odd f5)
+t01: (move odd f5 f3) | (move even f2 f0)
+t02: (leave p1 even f0) | (move odd f3 f1)
+t03: (move odd f1 f0) | (move even f0 f2)
+t04: (leave p2 odd f0) | (move even f2 f0)
+t05: (board p2 even f0) | (board p1 odd f0)
+t06: (move odd f0 f1) | (move even f0 f2)
+t07: (move odd f1 f3) | (move even f2 f4)
+t08: (leave p2 even f4) | (leave p1 odd f3)
+Validation: ok
+Dynamic-state trace:
+t00-state: (lift-at even f2) (lift-at odd f5) (passenger-at p1 f2) (passenger-at p2 f5)    [goal facts satisfied: 0/2]
+t01-state: (boarded p1 even) (boarded p2 odd) (lift-at even f2) (lift-at odd f5)    [goal facts satisfied: 0/2]
+t02-state: (boarded p1 even) (boarded p2 odd) (lift-at even f0) (lift-at odd f3)    [goal facts satisfied: 0/2]
+t03-state: (boarded p2 odd) (lift-at even f0) (lift-at odd f1) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+t04-state: (boarded p2 odd) (lift-at even f2) (lift-at odd f0) (passenger-at p1 f0)    [goal facts satisfied: 0/2]
+t05-state: (lift-at even f0) (lift-at odd f0) (passenger-at p1 f0) (passenger-at p2 f0)    [goal facts satisfied: 0/2]
+t06-state: (boarded p1 odd) (boarded p2 even) (lift-at even f0) (lift-at odd f0)    [goal facts satisfied: 0/2]
+t07-state: (boarded p1 odd) (boarded p2 even) (lift-at even f2) (lift-at odd f1)    [goal facts satisfied: 0/2]
+t08-state: (boarded p1 odd) (boarded p2 even) (lift-at even f4) (lift-at odd f3)    [goal facts satisfied: 0/2]
+t09-state: (lift-at even f4) (lift-at odd f3) (passenger-at p1 f3) (passenger-at p2 f4)    [goal facts satisfied: 2/2]
+
+## L0 — logistics-c1-to-d2
+Domain: pddl/logistics/domain.pddl
+Problem: pddl/logistics/goal_c1_d2.pddl
+Ground actions: 24
+
+Forward STRIPS / BFS:
+01. (move r1 d1 d2)
+02. (putdown r1 c1 d2)
+Validation: ok
+Dynamic-state trace:
+s00: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/1]
+s01: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d2)    [goal facts satisfied: 0/1]
+s02: (container-at c1 d2) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 1/1]
+
+GraphPlan:
+t00: (move r1 d1 d2)
+t01: (putdown r1 c1 d2)
+Validation: ok
+Dynamic-state trace:
+t00-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/1]
+t01-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d2)    [goal facts satisfied: 0/1]
+t02-state: (container-at c1 d2) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 1/1]
+
+## L1 — logistics-c1-d1-robot-d2
+Domain: pddl/logistics/domain.pddl
+Problem: pddl/logistics/goal_c1_d1_robot_d2.pddl
+Ground actions: 24
+
+Forward STRIPS / BFS:
+01. (putdown r1 c1 d1)
+02. (move r1 d1 d2)
+Validation: ok
+Dynamic-state trace:
+s00: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/2]
+s01: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 1/2]
+s02: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (putdown r1 c1 d1)
+t01: (move r1 d1 d2)
+Validation: ok
+Dynamic-state trace:
+t00-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/2]
+t01-state: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 1/2]
+t02-state: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 2/2]
+
+## L2 — logistics-nested-onboard-goal
+Domain: pddl/logistics/domain.pddl
+Problem: pddl/logistics/goal_c1_d1_c3_onboard_robot_d2.pddl
+Ground actions: 24
+
+Forward STRIPS / BFS:
+01. (putdown r1 c1 d1)
+02. (move r1 d1 d2)
+03. (pickup r1 c3 d2)
+Validation: ok
+Dynamic-state trace:
+s00: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/3]
+s01: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 1/3]
+s02: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 2/3]
+s03: (container-at c1 d1) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 3/3]
+
+GraphPlan:
+t00: (putdown r1 c1 d1)
+t01: (move r1 d1 d2)
+t02: (pickup r1 c3 d2)
+Validation: ok
+Dynamic-state trace:
+t00-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/3]
+t01-state: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 1/3]
+t02-state: (container-at c1 d1) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 2/3]
+t03-state: (container-at c1 d1) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 3/3]
+
+## L3 — logistics-two-deliveries
+Domain: pddl/logistics/domain.pddl
+Problem: pddl/logistics/goal_c1_d2_c3_d3.pddl
+Ground actions: 24
+
+Forward STRIPS / BFS:
+01. (move r1 d1 d2)
+02. (putdown r1 c1 d2)
+03. (pickup r1 c3 d2)
+04. (move r1 d2 d3)
+05. (putdown r1 c3 d3)
+Validation: ok
+Dynamic-state trace:
+s00: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/2]
+s01: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d2)    [goal facts satisfied: 0/2]
+s02: (container-at c1 d2) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 1/2]
+s03: (container-at c1 d2) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 1/2]
+s04: (container-at c1 d2) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d3)    [goal facts satisfied: 1/2]
+s05: (container-at c1 d2) (container-at c2 d1) (container-at c3 d3) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 2/2]
+
+GraphPlan:
+t00: (move r1 d1 d2)
+t01: (putdown r1 c1 d2)
+t02: (pickup r1 c3 d2)
+t03: (move r1 d2 d3)
+t04: (putdown r1 c3 d3)
+Validation: ok
+Dynamic-state trace:
+t00-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/2]
+t01-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d2)    [goal facts satisfied: 0/2]
+t02-state: (container-at c1 d2) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 1/2]
+t03-state: (container-at c1 d2) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 1/2]
+t04-state: (container-at c1 d2) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d3)    [goal facts satisfied: 1/2]
+t05-state: (container-at c1 d2) (container-at c2 d1) (container-at c3 d3) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 2/2]
+
+## L4 — logistics-all-to-d3
+Domain: pddl/logistics/domain.pddl
+Problem: pddl/logistics/goal_all_d3.pddl
+Ground actions: 24
+
+Forward STRIPS / BFS:
+01. (move r1 d1 d3)
+02. (putdown r1 c1 d3)
+03. (move r1 d3 d1)
+04. (pickup r1 c2 d1)
+05. (move r1 d1 d3)
+06. (putdown r1 c2 d3)
+07. (move r1 d3 d2)
+08. (pickup r1 c3 d2)
+09. (move r1 d2 d3)
+10. (putdown r1 c3 d3)
+Validation: ok
+Dynamic-state trace:
+s00: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/3]
+s01: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d3)    [goal facts satisfied: 0/3]
+s02: (container-at c1 d3) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 1/3]
+s03: (container-at c1 d3) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 1/3]
+s04: (container-at c1 d3) (container-at c3 d2) (onboard c2 r1) (robot-at r1 d1)    [goal facts satisfied: 1/3]
+s05: (container-at c1 d3) (container-at c3 d2) (onboard c2 r1) (robot-at r1 d3)    [goal facts satisfied: 1/3]
+s06: (container-at c1 d3) (container-at c2 d3) (container-at c3 d2) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 2/3]
+s07: (container-at c1 d3) (container-at c2 d3) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 2/3]
+s08: (container-at c1 d3) (container-at c2 d3) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 2/3]
+s09: (container-at c1 d3) (container-at c2 d3) (onboard c3 r1) (robot-at r1 d3)    [goal facts satisfied: 2/3]
+s10: (container-at c1 d3) (container-at c2 d3) (container-at c3 d3) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 3/3]
+
+GraphPlan:
+t00: (move r1 d1 d3)
+t01: (putdown r1 c1 d3)
+t02: (move r1 d3 d2)
+t03: (pickup r1 c3 d2)
+t04: (move r1 d2 d3)
+t05: (putdown r1 c3 d3)
+t06: (move r1 d3 d1)
+t07: (pickup r1 c2 d1)
+t08: (move r1 d1 d3)
+t09: (putdown r1 c2 d3)
+Validation: ok
+Dynamic-state trace:
+t00-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d1)    [goal facts satisfied: 0/3]
+t01-state: (container-at c2 d1) (container-at c3 d2) (onboard c1 r1) (robot-at r1 d3)    [goal facts satisfied: 0/3]
+t02-state: (container-at c1 d3) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 1/3]
+t03-state: (container-at c1 d3) (container-at c2 d1) (container-at c3 d2) (empty r1) (robot-at r1 d2)    [goal facts satisfied: 1/3]
+t04-state: (container-at c1 d3) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d2)    [goal facts satisfied: 1/3]
+t05-state: (container-at c1 d3) (container-at c2 d1) (onboard c3 r1) (robot-at r1 d3)    [goal facts satisfied: 1/3]
+t06-state: (container-at c1 d3) (container-at c2 d1) (container-at c3 d3) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 2/3]
+t07-state: (container-at c1 d3) (container-at c2 d1) (container-at c3 d3) (empty r1) (robot-at r1 d1)    [goal facts satisfied: 2/3]
+t08-state: (container-at c1 d3) (container-at c3 d3) (onboard c2 r1) (robot-at r1 d1)    [goal facts satisfied: 2/3]
+t09-state: (container-at c1 d3) (container-at c3 d3) (onboard c2 r1) (robot-at r1 d3)    [goal facts satisfied: 2/3]
+t10-state: (container-at c1 d3) (container-at c2 d3) (container-at c3 d3) (empty r1) (robot-at r1 d3)    [goal facts satisfied: 3/3]
+
